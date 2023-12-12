@@ -26,10 +26,13 @@ Front-end
 - As views da aplicação serão baseadas no padrão MVC usando opcionalmente a biblioteca React ou qualquer Java template engine (Thymeleaf). 
 
 Instruções: 
-- Depois de baixar o repositório e abri-lo no spring, para testar as funções acesse no navegador:<br> http://localhost:8080/swagger-ui/index.html
+- É necessário abri-lo no spring e conectar com o banco de dados ao executar a API.
+- Para testar as funções acesse no navegador: http://localhost:8080/swagger-ui/index.html
+- É possivel fazer o CRUD e conferir no MySQL no banco criado chamado "bflorturismo-api". 
  <div style="display: inline_block" align = "center">
 FERRAMENTAS UTILIZADAS:
 <img align="center" alt="Polly-Spring" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg"> 
+<img align="center" alt="Polly-Mysql" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"> 
 <img align="center" alt="Polly-swagger" height="30" width="40" src="https://cdn.svgporn.com/logos/swagger.svg"> 
 </div> 
 <br><br>
