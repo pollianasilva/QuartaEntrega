@@ -30,7 +30,7 @@ Instruções:
 - Para testar as funções acesse no navegador: http://localhost:8080/swagger-ui/index.html
 - É possivel fazer o CRUD e conferir no MySQL no banco criado chamado "bflorturismo-api". 
  <div style="display: inline_block" align = "center">
-FERRAMENTAS UTILIZADAS:
+FORAM UTILIZADOS:
 <img align="center" alt="Polly-Spring" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg"> 
 <img align="center" alt="Polly-Mysql" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"> 
 <img align="center" alt="Polly-swagger" height="30" width="40" src="https://cdn.svgporn.com/logos/swagger.svg"> 
