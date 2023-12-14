@@ -10,56 +10,58 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+
 import com.bflorturismo.models.Usuario;
-import com.bflorturismo.repositories.UsuarioRepository;
+
+import com.bflorturismo.services.UsuarioService;
 //import io.swagger.v3.oas.annotations.parameters.RequestBody;
+
+
 @RestController
-public class UsuarioController {
-	
+@RequestMapping("/usuario")
+public class UsuarioController {	
 
 	@Autowired
-	private UsuarioRepository usuarioRepo;
-
+	private UsuarioService ur;
 	@PostMapping("/saveusuario")
 	public Usuario createUsuario(@RequestBody Usuario usuario) {
 
-		return usuarioRepo.save(usuario);
+		return ur.saveUsuario(usuario);
 
 	}
 
 	@GetMapping("/allusuarios")
 	public List<Usuario> getAllUsuarios() {
-
-		return usuarioRepo.findAll();
+		return ur.getAllUsuarios();
 	}
 	
 	
 	@GetMapping("/{id}")
-	public ResponseEntity<Usuario> getUsuarioById(@PathVariable Long id){
-		Usuario usuario = usuarioRepo.findById(id).get();
-		
+	public ResponseEntity<Usuario> getUsuario(@PathVariable Long id){
+		Usuario usuario = ur.getUsuarioById(id);
 		return ResponseEntity.ok(usuario);
-	}
-	
+	}	
 	
 	@PutMapping("/{id}")
-	public ResponseEntity<Usuario> updateUsuario(@PathVariable Long id, @RequestBody Usuario usuarioUpdated){
-		Usuario usuario = usuarioRepo.findById(id).get();
+	public ResponseEntity<Usuario> updateUsuario(@PathVariable Long id,@RequestBody Usuario usuarioUpdated){
+		Usuario usuario = ur.getUsuarioById(id);
+		usuario.setNomeCompleto(usuarioUpdated.getNomeCompleto());
+		usuario.setCpf(usuarioUpdated.getCpf());
+		usuario.setEndereco(usuarioUpdated.getEndereco());
+		usuario.setEmail(usuarioUpdated.getEmail());
+		usuario.setSenha(usuarioUpdated.getSenha());
 		
-		usuarioUpdated.setId(id);
+		ur.saveUsuario(usuario);
 		
-		usuarioRepo.save(usuarioUpdated);
-		
-		return ResponseEntity.ok(usuario);
+		return  ResponseEntity.ok(usuario);
 	}
-	
-	
+ 
 	@DeleteMapping("/{id}")
 	public void deleteUsuario(@PathVariable Long id) {
-		usuarioRepo.deleteById(id);
+		ur.deleteById(id);
 	}
-	
 
 }

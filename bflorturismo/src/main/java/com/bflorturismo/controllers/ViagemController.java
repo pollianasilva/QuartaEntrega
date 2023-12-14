@@ -13,8 +13,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.bflorturismo.dto.ViagemDTO;
 import com.bflorturismo.models.Viagem;
-import com.bflorturismo.repositories.ViagemRepository;
+import com.bflorturismo.services.ViagemService;
 
 
 //import io.swagger.v3.oas.annotations.parameters.RequestBody;
@@ -26,45 +27,43 @@ import com.bflorturismo.repositories.ViagemRepository;
 	public class ViagemController {
 
 		@Autowired
-		private ViagemRepository viagemRepo;
+		private ViagemService vr;
 
 		@PostMapping("/saveviagem")
-		public Viagem createViagem(@RequestBody Viagem viagem) {
+		public Viagem createViagem(@RequestBody ViagemDTO viagemDto) {
 
-			return viagemRepo.save(viagem);
+			return vr.saveViagem(viagemDto);
 		}
 
 		@GetMapping("/allviagens")
 		public List<Viagem> getAllViagens() {
 
-			return viagemRepo.findAll();
+			return vr.getAllViagens();
 		}
-		
-		
+
+
 		@GetMapping("/{id}")
 		public ResponseEntity<Viagem> getViagemById(@PathVariable Long id){
-			Viagem viagem = viagemRepo.findById(id).get();
+			Viagem viagem = vr.getViagemById(id);
 			
 			return ResponseEntity.ok(viagem);
 		}
-		
-		
+
+
 		@PutMapping("/{id}")
-		public ResponseEntity<Viagem> updateViagem(@PathVariable Long id, @RequestBody Viagem viagemUpdated){
-			Viagem viagem = viagemRepo.findById(id).get();
+		public ResponseEntity<Viagem> updateViagem(@PathVariable Long id, @RequestBody ViagemDTO viagemDTOUpdated){
+			Viagem viagem = vr.getViagemById(id);
 			
-			viagemUpdated.setId(id);
+
 			
-			viagemRepo.save(viagemUpdated);
+			vr.updateViagem(id, viagemDTOUpdated);
 			
 			return ResponseEntity.ok(viagem);
 		}
-		
-		
+
+
 		@DeleteMapping("/{id}")
 		public void deleteViagem(@PathVariable Long id) {
-			viagemRepo.deleteById(id);
-		}
-		
-	
+			vr.deleteById(id);
+}
 }
