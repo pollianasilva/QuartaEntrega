@@ -5,7 +5,20 @@
 
 
 
-<br>
+
+Instruções: 
+- É necessário abri-lo no spring e conectar com o banco de dados ao executar a API.
+- Para testar as funções acesse no navegador: http://localhost:8080/swagger-ui/index.html
+- É possivel fazer o CRUD e conferir no MySQL no banco criado chamado "bflorturismo-api".
+  
+ <div style="display: inline_block" align = "center">
+  <br>
+FORAM UTILIZADOS:
+<img align="center" alt="Polly-Spring" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg"> 
+<img align="center" alt="Polly-Mysql" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"> 
+<img align="center" alt="Polly-swagger" height="30" width="40" src="https://cdn.svgporn.com/logos/swagger.svg"> 
+</div> 
+<br><br>
 
 Nessa entrega foram solicitados:
 <br>
@@ -21,21 +34,11 @@ Back-end
 - Refatorar o código anterior usando os padrões de projeto MVC e Persistência de dados com os frameworks Spring para a organização da aplicação. 
   
 
-Front-end 
+<s>Front-end</s> 
 
-- As views da aplicação serão baseadas no padrão MVC usando opcionalmente a biblioteca React ou qualquer Java template engine (Thymeleaf). 
+- <s>As views da aplicação serão baseadas no padrão MVC usando opcionalmente a biblioteca React ou qualquer Java template engine (Thymeleaf). </s>
 
-Instruções: 
-- É necessário abri-lo no spring e conectar com o banco de dados ao executar a API.
-- Para testar as funções acesse no navegador: http://localhost:8080/swagger-ui/index.html
-- É possivel fazer o CRUD e conferir no MySQL no banco criado chamado "bflorturismo-api". 
- <div style="display: inline_block" align = "center">
-FORAM UTILIZADOS:
-<img align="center" alt="Polly-Spring" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg"> 
-<img align="center" alt="Polly-Mysql" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"> 
-<img align="center" alt="Polly-swagger" height="30" width="40" src="https://cdn.svgporn.com/logos/swagger.svg"> 
-</div> 
-<br><br>
+
 
 [![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Montserrat&size=30&pause=1000&color=FD8524&random=false&width=435&lines=Sobre+o+RecodePro)](https://git.io/typing-svg)
 
