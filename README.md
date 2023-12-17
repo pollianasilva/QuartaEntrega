@@ -55,7 +55,7 @@ Durante o curso, foram solicitados quatro trabalhos individuais à medida que no
 
 | Primeira Entrega:| Segunda Entrega: | Terceira Entrega | Quarta Entrega | Última Entrega |
 | --- | --- | --- | --- | --- |
-| Entregue em: 05/08/23<br> https://github.com/pollianasilva/PrimeiraEntrega| Entregue em: 16/10/23<br> https://github.com/pollianasilva/SegundaEntrega | Entregue em: 03/11/23<br> https://github.com/pollianasilva/TerceiraEntrega | Entregue em: Prevista para: 09/01/24<br>https://github.com/pollianasilva/QuartaEntrega | Prevista para: 09/01/24<br>https://github.com/pollianasilva/UltimaEntrega |
+| Entregue em: 05/08/23<br> https://github.com/pollianasilva/PrimeiraEntrega| Entregue em: 16/10/23<br> https://github.com/pollianasilva/SegundaEntrega | Entregue em: 03/11/23<br> https://github.com/pollianasilva/TerceiraEntrega | Entregue em: 13/12/23<br>https://github.com/pollianasilva/QuartaEntrega | Prevista para: 09/01/24<br>https://github.com/pollianasilva/UltimaEntrega |
 
 
 
